@@ -1,0 +1,223 @@
+body {
+
+  margin: 0;
+
+  padding: 0;
+
+  font-family: 'Segoe UI', sans-serif;
+
+  height: 100vh;
+
+  overflow: hidden;
+
+  position: relative;
+
+  background: linear-gradient(180deg, #a8edea, #fed6e3);
+
+  animation: bgMove 20s infinite alternate;
+
+}
+
+@keyframes bgMove {
+
+  0% { background-position: 0 0; }
+
+  100% { background-position: 100% 100%; }
+
+}
+
+.animated-bg {
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  overflow: hidden;
+
+  z-index: 0;
+
+}
+
+.tree {
+
+  position: absolute;
+
+  bottom: 0;
+
+  left: 20px;
+
+  width: 80px;
+
+  height: 120px;
+
+  background: brown;
+
+  border-radius: 10px;
+
+}
+
+.tree::before {
+
+  content: '';
+
+  position: absolute;
+
+  top: -80px;
+
+  left: -40px;
+
+  width: 160px;
+
+  height: 160px;
+
+  background: green;
+
+  border-radius: 50%;
+
+  z-index: -1;
+
+}
+
+.flower {
+
+  position: absolute;
+
+  bottom: 10px;
+
+  width: 30px;
+
+  height: 30px;
+
+  background: pink;
+
+  border-radius: 50%;
+
+  animation: sway 4s infinite ease-in-out;
+
+}
+
+.flower1 { left: 100px; }
+
+.flower2 { left: 300px; }
+
+@keyframes sway {
+
+  0%, 100% { transform: translateY(0); }
+
+  50% { transform: translateY(-10px); }
+
+}
+
+.container {
+
+  position: relative;
+
+  z-index: 1;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  border-radius: 20px;
+
+  padding: 20px;
+
+  max-width: 400px;
+
+  margin: auto;
+
+  text-align: center;
+
+  margin-top: 5vh;
+
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+
+}
+
+h1 {
+
+  font-size: 2em;
+
+  color: #333;
+
+  margin-bottom: 20px;
+
+}
+
+.switch-buttons button,
+
+.actions button {
+
+  padding: 10px 20px;
+
+  margin: 8px 5px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+
+  color: white;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: transform 0.2s ease, background 0.3s ease;
+
+}
+
+.switch-buttons button:hover,
+
+.actions button:hover {
+
+  transform: scale(1.05);
+
+  background: linear-gradient(to right, #00f2fe, #4facfe);
+
+}
+
+#options button {
+
+  display: block;
+
+  width: 100%;
+
+  margin: 5px 0;
+
+  background: #fff8dc;
+
+  color: #333;
+
+  border: 2px solid #4facfe;
+
+  border-radius: 10px;
+
+}
+
+#scoreArea {
+
+  margin: 10px 0;
+
+  font-size: 1.1rem;
+
+  font-weight: bold;
+
+  color: #444;
+
+}
+
+#helplife {
+
+  color: green;
+
+  font-weight: bold;
+
+  margin-bottom: 10px;
+
+}
